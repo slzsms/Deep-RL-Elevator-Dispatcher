@@ -1,7 +1,32 @@
+*.pyc
+.*.un~
+*.log
+result1
+result2
+stable_diff
+
+build/
+rlschool.egg-info/
+*.whl
+
+
+# ADDED BY KHALESAH
+# python virtual environment
+.venv/
+venv/
+
+# python generated files
 __pycache__/
 *.py[cod]
 *.egg-info/
-.venv/
-build/
+
+# simulation-generated files
+animation_buffer/
+image_buffer/
+
+# generated results
+project/results/
+project/plots/
+project/checkpoints/
 dist/
 outputs/

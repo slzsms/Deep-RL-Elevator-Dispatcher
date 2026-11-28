@@ -1,6 +1,26 @@
-# PPO elevator dispatch agent
+# MetaGym
 
-The PPO contribution lives in `project/agents/ppo_agent.py` and is intended to be used with the shared LiftSim environment and evaluation framework on the [khalesah branch](https://github.com/niloferh/Deep-RL-Elevator-Dispatcher/tree/khalesah).
+MetaGym provides abundant environments for benchmarking Reinforcement Learning and Meta Reinforcement Learning
+
+# Environments Updating
+
+- [LiftSim](metagym/liftsim)：Simulator for Evelvator Dispatching (Sep, 2019)
+
+- [Quadrotor](metagym/quadrotor): 3D Quadrotor simulator for different tasks (Mar, 2020)
+
+- [Quadrupedal](metagym/quadrupedal): Quadrupedal robot adapting to different terrains (Seq, 2021)
+
+- [MetaMaze](metagym/metamaze): 2D/3D maze generators for task generalization (Oct, 2021)
+
+- [MetaLocomotion](metagym/metalocomotion): Locomotion simulator with diverse geometries (June, 2022)
+
+- [MetaLM](metagym/metalm): Meta language model dataset (Dec, 2022)
+
+- [Bandits](metagym/bandits): Bandits task generalization (Dec, 2022)
+
+## PPO elevator dispatch agent
+
+The PPO contribution lives in `project/agents/ppo_agent.py` and is intended to be used with the shared LiftSim environment and evaluation framework on this branch.
 
 Requires NumPy and PyTorch, in addition to the shared LiftSim dependencies.
 
@@ -16,4 +36,4 @@ agent.reset()
 action = agent.act(observation)
 ```
 
-To reuse trained weights, call `agent.save("ppo.pt")` after training and initialize with `PPOAgent(env, checkpoint="ppo.pt")` for evaluation. The shared framework owns environment configuration, rendering, evaluation and metrics. This branch is not a standalone simulator.
+To reuse trained weights, call `agent.save("ppo.pt")` after training and initialize with `PPOAgent(env, checkpoint="ppo.pt")` for evaluation. The shared framework owns environment configuration, rendering, evaluation and metrics.
