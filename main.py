@@ -16,16 +16,18 @@ outputs:
 
 # define input parameters in one place
 num_test_episodes = 1
-num_episode_steps = 1000
+num_episode_steps = 2000
 print_elevator_status = True
 render_animation = True
 
 # call testing function per agent type and per config file
 
 # RANDOM
-test_agents("random", "config_three_elevators.ini", num_test_episodes, num_episode_steps, print_elevator_status, render_animation)
+#test_agents("random", "config_three_elevators.ini", num_test_episodes, num_episode_steps, print_elevator_status, render_animation)
 
 # NEAREST CAR
+test_agents("nearest_car", "config_three_elevators.ini", num_test_episodes, num_episode_steps, print_elevator_status, render_animation)
+
 
 # COLLECTIVE
 
