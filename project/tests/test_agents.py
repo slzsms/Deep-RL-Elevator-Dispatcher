@@ -7,6 +7,7 @@ from metagym.liftsim.environment.mansion import mansion_manager
 
 ### COMPLETE - ADD LIBRARIES THAT YOU NEED TO RUN YOUR AGENT
 from project.agents.random_agent import RandomAgent
+from project.agents.nearest_car_agent import NearestCarAgent
 from project.agents.ppo_agent import PPOAgent       # can put this inside the case statement
 from project.agents.dqn.dqn_agent.agent import DQNAgent
 
@@ -32,8 +33,7 @@ def test_agents(agent_type, config_filename, num_test_episodes, num_episode_step
         case "random":
             agent = RandomAgent(num_elevators=env._mansion._elevator_number, seed=42) 
         case "nearest_car":
-            ### COMPLETE - ADD CODE TO CALL YOUR AGENT WITH THE NECESSASRY INPUT PARAMETERS
-            print("nearest_car")
+            agent = NearestCarAgent(num_elevators=env._mansion._elevator_number)
         case "collective_control":
             ### COMPLETE - ADD CODE TO CALL YOUR AGENT WITH THE NECESSASRY INPUT PARAMETERS
             print("collective_control")
